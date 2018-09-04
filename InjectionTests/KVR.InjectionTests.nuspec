@@ -7,8 +7,8 @@
     <authors>Landon Key</authors>
     <owners>Landon Key</owners>
     <licenseUrl>https://opensource.org/licenses/lgpl-3.0.html</licenseUrl>
-    <projectUrl>https://github.com</projectUrl>
-    <iconUrl>icon.jpg</iconUrl>
+    <projectUrl>https://github.com/postworthy/InjectionTests</projectUrl>
+    <iconUrl>https://github.com/postworthy/InjectionTests/raw/master/InjectionTests/Icon/icon.jpg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>KVR Injection Tests</description>
     <releaseNotes></releaseNotes>
