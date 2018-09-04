@@ -49,11 +49,26 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Common\InjectionHelper.cs" />
+    <Compile Include="Common\InjectionTest.cs" />
+    <Compile Include="Extensions\Cecil.cs" />
+    <Compile Include="Extensions\InclusionExtensions.cs" />
+    <Compile Include="Extensions\InstructionExtensions.cs" />
+    <Compile Include="Extensions\TypeDefinitionExtensions.cs" />
+    <Compile Include="Models\SanitizerFactory.cs" />
+    <Compile Include="Models\SanitizerSearchPattern.cs" />
+    <Compile Include="Models\TypeInfo.cs" />
+    <Compile Include="Platforms\Universal\UniversalTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="KVR.InjectionTests.nuspec" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Icon\icon.jpg" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

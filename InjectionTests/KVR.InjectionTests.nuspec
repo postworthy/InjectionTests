@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata minClientVersion="2.8">
+    <id>KVRInjectionTests</id>
+    <version>1.0.0</version>
+    <title>KVR Injection Tests</title>
+    <authors>Landon Key</authors>
+    <owners>Landon Key</owners>
+    <licenseUrl>https://opensource.org/licenses/lgpl-3.0.html</licenseUrl>
+    <projectUrl>https://github.com</projectUrl>
+    <iconUrl>icon.jpg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>KVR Injection Tests</description>
+    <releaseNotes></releaseNotes>
+    <copyright>KVR</copyright>
+    <tags>KVR,Vulnerability,.NET,OWASP,Injection,XSS,CSRF,XXE,SQLi,LDAPi</tags>
+    <developmentDependency>true</developmentDependency>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Web" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Net" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Configuration" targetFramework="" />
+    </frameworkAssemblies>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="11.0.2" />
+      <dependency id="Mono.Cecil" version="0.10.0" />
+      <dependency id="Microsoft.AspNet.Mvc" version="5.2.6" />
+      <dependency id="Microsoft.AspNet.WebPages" version="3.2.6" />
+      <dependency id="MSTest.TestAdapter" version="1.2.1" />
+      <dependency id="MSTest.TestFramework" version="1.2.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="InjectionTests.dll" target="lib\net40"  />
+  </files>
+</package>
