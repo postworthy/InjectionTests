@@ -17,7 +17,7 @@ namespace InjectionTests.Common
 {
     public abstract class InjectionTest<T> where T : class
     {
-        private static readonly string[] EXCLUDE = new[] { "mscorlib", "System", "Microsoft", "AjaxControlToolkit", "WebGrease", "DevTrends" };
+        private static readonly string[] EXCLUDE = new[] { "mscorlib", "System", "Microsoft", "AjaxControlToolkit", "WebGrease", "DevTrends", "Newtonsoft" };
         protected abstract List<TypeInfo> GetReferenceTypes();
         protected virtual List<string> MethodExclusions()
         {
