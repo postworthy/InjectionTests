@@ -24,54 +24,54 @@ namespace InjectionTests.Models
                 {
                     Pattern = "Format",
                     Steps = 10,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                    Direction = Extensions.InstructionExtensions.Direction.Next,
                     ContinueWith = new SanitizerSearchPattern()
                     {
                         Pattern = "Parameter",
                         Steps = 5,
-                        Direction = Extensions.Extensions.InstructionExtensions.Direction.Next
+                        Direction = Extensions.InstructionExtensions.Direction.Next
                     }
                 },
                 new SanitizerSearchPattern()
                 {
                     Pattern = "Log",
                     Steps = 1,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Previous
+                    Direction = Extensions.InstructionExtensions.Direction.Previous
                 },
                 new SanitizerSearchPattern()
                 {
                     Pattern = "Format",
                     Steps = 10,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                    Direction = Extensions.InstructionExtensions.Direction.Next,
                     ContinueWith = new SanitizerSearchPattern()
                     {
                         Pattern = "Log",
                         Steps = 5,
-                        Direction = Extensions.Extensions.InstructionExtensions.Direction.Next
+                        Direction = Extensions.InstructionExtensions.Direction.Next
                     }
                 },
                 new SanitizerSearchPattern()
                 {
                     Pattern = "Format",
                     Steps = 10,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                    Direction = Extensions.InstructionExtensions.Direction.Next,
                     ContinueWith = new SanitizerSearchPattern()
                     {
                         Pattern = "Get_Item",
                         Steps = 1,
-                        Direction = Extensions.Extensions.InstructionExtensions.Direction.Previous
+                        Direction = Extensions.InstructionExtensions.Direction.Previous
                     }
                 },
                 new SanitizerSearchPattern()
                 {
                     Pattern = "Format",
                     Steps = 10,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                    Direction = Extensions.InstructionExtensions.Direction.Next,
                     ContinueWith = new SanitizerSearchPattern()
                     {
                         Pattern = ".ctor",
                         Steps = 5,
-                        Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                        Direction = Extensions.InstructionExtensions.Direction.Next,
                         ContinueWithFunc = x => x?.Operand?.ToString() == "System.Void System.Exception::.ctor(System.String)"
                     }
                 },
@@ -79,12 +79,12 @@ namespace InjectionTests.Models
                 {
                     Pattern = "Format",
                     Steps = 10,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                    Direction = Extensions.InstructionExtensions.Direction.Next,
                     ContinueWith = new SanitizerSearchPattern()
                     {
                         Pattern = ".ctor",
                         Steps = 5,
-                        Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                        Direction = Extensions.InstructionExtensions.Direction.Next,
                         ContinueWithFunc = x => x?.Operand?.ToString() == "System.Void System.Security.SecurityException::.ctor(System.String)"
                     }
                 },
@@ -92,7 +92,7 @@ namespace InjectionTests.Models
                 {
                     Pattern = "Get_Response",
                     Steps = 1,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Previous,
+                    Direction = Extensions.InstructionExtensions.Direction.Previous,
                     ContinueWithFunc = x => x?.Operand?.ToString()?.StartsWith("System.Web.HttpResponse") == true
                 },
             };
@@ -107,55 +107,55 @@ namespace InjectionTests.Models
                 {
                     Pattern = "Concat",
                     Steps = 10,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                    Direction = Extensions.InstructionExtensions.Direction.Next,
                     ContinueWithFunc = x => x.OpCode == OpCodes.Nop || (x.Operand as MethodReference) == null
                 },
                 new SanitizerSearchPattern()
                 {
                     Pattern = "Concat",
                     Steps = 10,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                    Direction = Extensions.InstructionExtensions.Direction.Next,
                     ContinueWith = new SanitizerSearchPattern()
                     {
                         Pattern = "Parameter",
                         Steps = 5,
-                        Direction = Extensions.Extensions.InstructionExtensions.Direction.Next
+                        Direction = Extensions.InstructionExtensions.Direction.Next
                     }
                 },
                 new SanitizerSearchPattern()
                 {
                     Pattern = "Concat",
                     Steps = 10,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                    Direction = Extensions.InstructionExtensions.Direction.Next,
                     ContinueWith = new SanitizerSearchPattern()
                     {
                         Pattern = "Log",
                         Steps = 5,
-                        Direction = Extensions.Extensions.InstructionExtensions.Direction.Next
+                        Direction = Extensions.InstructionExtensions.Direction.Next
                     }
                 },
                 new SanitizerSearchPattern()
                 {
                     Pattern = "Log",
                     Steps = 1,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Previous
+                    Direction = Extensions.InstructionExtensions.Direction.Previous
                 },
                 new SanitizerSearchPattern()
                 {
                     Pattern = "Get_Item",
                     Steps = 1,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next
+                    Direction = Extensions.InstructionExtensions.Direction.Next
                 },
                 new SanitizerSearchPattern()
                 {
                     Pattern = "Concat",
                     Steps = 10,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                    Direction = Extensions.InstructionExtensions.Direction.Next,
                     ContinueWith = new SanitizerSearchPattern()
                     {
                         Pattern = ".ctor",
                         Steps = 5,
-                        Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                        Direction = Extensions.InstructionExtensions.Direction.Next,
                         ContinueWithFunc = x => x?.Operand?.ToString() == "System.Void System.Exception::.ctor(System.String)"
                     }
                 },
@@ -163,12 +163,12 @@ namespace InjectionTests.Models
                 {
                     Pattern = "Concat",
                     Steps = 10,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                    Direction = Extensions.InstructionExtensions.Direction.Next,
                     ContinueWith = new SanitizerSearchPattern()
                     {
                         Pattern = ".ctor",
                         Steps = 5,
-                        Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                        Direction = Extensions.InstructionExtensions.Direction.Next,
                         ContinueWithFunc = x => x?.Operand?.ToString() == "System.Void System.Security.SecurityException::.ctor(System.String)"
                     }
                 },
@@ -176,7 +176,7 @@ namespace InjectionTests.Models
                 {
                     Pattern = "Get_Response",
                     Steps = 1,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Previous,
+                    Direction = Extensions.InstructionExtensions.Direction.Previous,
                     ContinueWithFunc = x => x?.Operand?.ToString()?.StartsWith("System.Web.HttpResponse") == true
                 },
             };
@@ -191,55 +191,55 @@ namespace InjectionTests.Models
                 {
                     Pattern = "Append",
                     Steps = 10,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                    Direction = Extensions.InstructionExtensions.Direction.Next,
                     ContinueWithFunc = x => x.OpCode == OpCodes.Nop || (x.Operand as MethodReference) == null
                 },
                 new SanitizerSearchPattern()
                 {
                     Pattern = "Append",
                     Steps = 10,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                    Direction = Extensions.InstructionExtensions.Direction.Next,
                     ContinueWith = new SanitizerSearchPattern()
                     {
                         Pattern = "Parameter",
                         Steps = 5,
-                        Direction = Extensions.Extensions.InstructionExtensions.Direction.Next
+                        Direction = Extensions.InstructionExtensions.Direction.Next
                     }
                 },
                 new SanitizerSearchPattern()
                 {
                     Pattern = "Append",
                     Steps = 10,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                    Direction = Extensions.InstructionExtensions.Direction.Next,
                     ContinueWith = new SanitizerSearchPattern()
                     {
                         Pattern = "Log",
                         Steps = 5,
-                        Direction = Extensions.Extensions.InstructionExtensions.Direction.Next
+                        Direction = Extensions.InstructionExtensions.Direction.Next
                     }
                 },
                 new SanitizerSearchPattern()
                 {
                     Pattern = "Log",
                     Steps = 1,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Previous
+                    Direction = Extensions.InstructionExtensions.Direction.Previous
                 },
                 new SanitizerSearchPattern()
                 {
                     Pattern = "Get_Item",
                     Steps = 1,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next
+                    Direction = Extensions.InstructionExtensions.Direction.Next
                 },
                 new SanitizerSearchPattern()
                 {
                     Pattern = "Append",
                     Steps = 10,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                    Direction = Extensions.InstructionExtensions.Direction.Next,
                     ContinueWith = new SanitizerSearchPattern()
                     {
                         Pattern = ".ctor",
                         Steps = 5,
-                        Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                        Direction = Extensions.InstructionExtensions.Direction.Next,
                         ContinueWithFunc = x => x?.Operand?.ToString() == "System.Void System.Exception::.ctor(System.String)"
                     }
                 },
@@ -247,12 +247,12 @@ namespace InjectionTests.Models
                 {
                     Pattern = "Append",
                     Steps = 10,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                    Direction = Extensions.InstructionExtensions.Direction.Next,
                     ContinueWith = new SanitizerSearchPattern()
                     {
                         Pattern = ".ctor",
                         Steps = 5,
-                        Direction = Extensions.Extensions.InstructionExtensions.Direction.Next,
+                        Direction = Extensions.InstructionExtensions.Direction.Next,
                         ContinueWithFunc = x => x?.Operand?.ToString() == "System.Void System.Security.SecurityException::.ctor(System.String)"
                     }
                 },
@@ -260,7 +260,7 @@ namespace InjectionTests.Models
                 {
                     Pattern = "Get_Response",
                     Steps = 1,
-                    Direction = Extensions.Extensions.InstructionExtensions.Direction.Previous,
+                    Direction = Extensions.InstructionExtensions.Direction.Previous,
                     ContinueWithFunc = x => x?.Operand?.ToString()?.StartsWith("System.Web.HttpResponse") == true
                 },
             };
