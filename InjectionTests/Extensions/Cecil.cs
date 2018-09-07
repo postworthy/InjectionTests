@@ -1,4 +1,4 @@
-﻿using InjectionTests.Extensions.Extensions;
+﻿using InjectionTests.Extensions;
 using Mono.Cecil;
 using Mono.Cecil.Cil;
 using System;

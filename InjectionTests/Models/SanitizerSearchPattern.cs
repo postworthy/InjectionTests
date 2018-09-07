@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static InjectionTests.Extensions.Extensions.InstructionExtensions;
+using static InjectionTests.Extensions.InstructionExtensions;
 
 namespace InjectionTests.Models
 {
