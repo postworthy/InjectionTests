@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InjectionTests.Extensions.Extensions
+namespace InjectionTests.Extensions
 {
     public static class InstructionExtensions
     {
