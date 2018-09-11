@@ -97,9 +97,8 @@ namespace InjectionTests.Common
             var filteredMethods = all
                 .ExcludeMethods(MethodExclusions())
                 .Where(x =>
-                //x.IsPublic                                                                                                    
-                //&& 
-                x.Parameters.Count > 0
+                (typeof(T) != typeof(object) || x.IsPublic)
+                && x.Parameters.Count > 0
                 && !x.Parameters.All(y => y.ParameterType.IsValueType)
                 && !x.CustomAttributes.Any(y => y.AttributeType.Name.Contains("MarkSafe"))
                 ).ToList();
