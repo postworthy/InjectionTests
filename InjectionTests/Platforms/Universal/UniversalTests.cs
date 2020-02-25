@@ -42,10 +42,15 @@ namespace InjectionTests.Platforms.Universal
         [TestMethod]
         public virtual void LDAPi()
         {
-            var failures = Helper.TestHelper(x => x.HasLdapCommands(), LDAP_KEYWORDS, "Potential LDAPi");
+            var failuresWithKeywords = Helper.TestHelper(x => x.HasLdapCommands(), LDAP_KEYWORDS, "Potential LDAPi");
 
-            if (failures.Length > 0)
-                Assert.Fail(Environment.NewLine + string.Join(Environment.NewLine, failures));
+            if (failuresWithKeywords.Length > 0)
+                Assert.Fail(Environment.NewLine + string.Join(Environment.NewLine, failuresWithKeywords));
+
+            var failuresWithNoKeywords = Helper.TestHelper(x => x.HasLdapCommands(), null, "Potential LDAPi (w/o Dangerous Strings)");
+
+            if (failuresWithNoKeywords.Length > 0)
+                Assert.Fail(Environment.NewLine + string.Join(Environment.NewLine, failuresWithNoKeywords));
         }
         [TestMethod]
         public virtual void ASMi()
